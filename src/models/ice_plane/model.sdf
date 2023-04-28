@@ -1,28 +1,28 @@
 <?xml version='1.0'?>
 <sdf version='1.4'>
-  <model name='road_straight'>
+  <model name='ice_plane'>
     <static>true</static>
-    <link name="road_straight">
+    <link name="ice_plane">
       <visual name="visual">
             <geometry>
                 <mesh>
-                    <uri>model://road_straight/materials/meshes/road_straight.dae</uri>
-                    <scale>0.5 0.5 1.0</scale>
-               </mesh>
+                    <uri>model://ice_plane/materials/meshes/ice_plane.dae</uri>
+		    		<scale>0.2 0.2 1.0</scale>
+                </mesh>
             </geometry>
         </visual>
         <collision name="collision">
             <geometry>
                 <mesh>
-                    <uri>model://road_straight/materials/meshes/road_straight.dae</uri>
-                    <scale>0.5 0.5 1.0</scale>
+                    <uri>model://ice_plane/materials/meshes/ice_plane.dae</uri>
+		    		<scale>0.2 0.2 1.0</scale>
                 </mesh>
             </geometry>
             <surface>
                 <friction>
                     <ode>
-                        <mu>2</mu>
-                        <mu2>1</mu2>
+                        <mu>0.1</mu>
+                        <mu2>0.05</mu2>
                     </ode>
                 </friction>
             </surface>

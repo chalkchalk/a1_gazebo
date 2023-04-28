@@ -34,11 +34,6 @@
         </visual>
     </link>
 
-    <xacro:if value="$(arg CAMERA)">
-        <xacro:realsense_d435 sensor_name="d345" parent_link="base" rate="30.0">
-        <origin rpy="0 0.1 0" xyz="0.26 0 0.02"/>
-        </xacro:realsense_d435>
-    </xacro:if> 
 
     <joint name="floating_base" type="fixed">
         <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -69,6 +64,12 @@
                 izz="${trunk_izz}"/>  
         </inertial>
     </link>
+
+    <xacro:if value="$(arg CAMERA)">
+        <xacro:realsense_d435 sensor_name="d435" parent_link="trunk" rate="50.0" rate_imu="100">
+        <origin rpy="0 0.1 0" xyz="0.26 0 0.02"/>
+        </xacro:realsense_d435>
+    </xacro:if> 
 
     <xacro:if value="${(rolloverProtection == 'true')}">
         <joint name="stick_joint" type="fixed">

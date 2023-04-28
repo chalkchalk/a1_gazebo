@@ -1,28 +1,28 @@
 <?xml version='1.0'?>
 <sdf version='1.4'>
-  <model name='road_straight'>
+  <model name='glass_plane_small'>
     <static>true</static>
-    <link name="road_straight">
+    <link name="glass_plane_small">
       <visual name="visual">
             <geometry>
                 <mesh>
-                    <uri>model://road_straight/materials/meshes/road_straight.dae</uri>
-                    <scale>0.5 0.5 1.0</scale>
-               </mesh>
+                    <uri>model://glass_plane_small/materials/meshes/glass_plane_small.dae</uri>
+		    		<scale>0.05 0.05 1.0</scale>
+                </mesh>
             </geometry>
         </visual>
         <collision name="collision">
             <geometry>
                 <mesh>
-                    <uri>model://road_straight/materials/meshes/road_straight.dae</uri>
-                    <scale>0.5 0.5 1.0</scale>
+                    <uri>model://glass_plane_small/materials/meshes/glass_plane_small.dae</uri>
+		    		<scale>0.05 0.05 1.0</scale>
                 </mesh>
             </geometry>
             <surface>
                 <friction>
                     <ode>
-                        <mu>2</mu>
-                        <mu2>1</mu2>
+                        <mu>0.3</mu>
+                        <mu2>0.15</mu2>
                     </ode>
                 </friction>
             </surface>

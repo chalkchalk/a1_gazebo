@@ -1,0 +1,2 @@
+docker cp a1_unitree_gazebo_docker:/root/.gazebo/models .
+
